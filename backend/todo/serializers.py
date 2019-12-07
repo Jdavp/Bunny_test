@@ -7,6 +7,6 @@ class UserSerializer(serializers.ModelSerializer):
     fields = ('id', 'name')
 
 class TaskSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = User_Tasks
-        fields = ('id','description','state','user_id')
+  class Meta:
+    model = User_Tasks
+    fields = ('id','description','state','user_id')
