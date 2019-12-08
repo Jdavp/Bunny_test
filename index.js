@@ -1,7 +1,7 @@
 function load_users() {
   $.ajax({
     type: 'GET',
-    url: 'http://127.0.0.1:8000/api/user/',
+    url: 'http://localhost:8000/api/user/',
     dataType:"json",
     success: function (data) {
         console.log(data)
@@ -13,7 +13,7 @@ function load_users() {
           content += '<td>'
           content += '<button id="update_user" onclick="update_user(' + data[i].id + ')" class="btn btn-primary">Update</button>'
           content += '<button id="delete_user" onclick="delete_user(' + data[i].id + ')" class="btn btn-danger">Delete</button>'
-          content += '<button id="user_task" class="btn btn-info">Task</button>'
+          content += '<button id="user_task" class="btn btn-info" onclick="show_modal()">Task</button>'
         }
         $('#user_info').html(content)
     }
@@ -23,7 +23,7 @@ function load_users() {
 function update_user (user_id) {
   $.ajax({
     type: 'PUT',
-    url: 'http://127.0.0.1:8000/api/user/' + user_id + '/',
+    url: 'http://localhost:8000/api/user/' + user_id + '/',
     dataType:"json",
     data:{name:$('#user_name_'+ user_id).val()},
     success: function(data) {
@@ -37,7 +37,7 @@ function update_user (user_id) {
 function delete_user (user_id) {
   $.ajax({
     type: 'DELETE',
-    url: 'http://127.0.0.1:8000/api/user/' + user_id + '/',
+    url: 'http://localhost:8000/api/user/' + user_id + '/',
     dataType:"json",
     success: function(data) {
       console.log(data)
@@ -46,8 +46,22 @@ function delete_user (user_id) {
   })
 }
 
+function show_modal () {
+  $('#modaltask').modal("show")
+  console.log("print modal")
+}
+
 function user_task (user_id) {
-  
+  $.ajax({
+    type: 'GET',
+    url: 'http://localhost:8000/user/' + user_id + 'user_tasks/',
+    dataType:"json",
+    success: function(data) {
+      console.log(data)
+      load_users() 
+
+  }
+})
 }
 
 $(document).ready(function () {
