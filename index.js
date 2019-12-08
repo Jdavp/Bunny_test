@@ -1,7 +1,7 @@
 function load_users() {
   $.ajax({
     type: 'GET',
-    url: 'http://localhost:8000/api/user/',
+    url: 'http://13.82.186.226:8000/api/user/',
     dataType:"json",
     success: function (data) {
         console.log(data)
@@ -23,7 +23,7 @@ function load_users() {
 function update_user (user_id) {
   $.ajax({
     type: 'PUT',
-    url: 'http://localhost:8000/api/user/' + user_id + '/',
+    url: 'http://13.82.186.226:8000/api/user/' + user_id + '/',
     dataType:"json",
     data:{name:$('#user_name_'+ user_id).val()},
     success: function(data) {
@@ -37,7 +37,7 @@ function update_user (user_id) {
 function delete_user (user_id) {
   $.ajax({
     type: 'DELETE',
-    url: 'http://localhost:8000/api/user/' + user_id + '/',
+    url: 'http://13.82.186.226:8000/api/user/' + user_id + '/',
     dataType:"json",
     success: function(data) {
       console.log(data)
@@ -54,7 +54,7 @@ function show_modal () {
 function user_task (user_id) {
   $.ajax({
     type: 'GET',
-    url: 'http://localhost:8000/user/' + user_id + 'user_tasks/',
+    url: 'http://13.82.186.226:8000/user/' + user_id + 'user_tasks/',
     dataType:"json",
     success: function(data) {
       console.log(data)
