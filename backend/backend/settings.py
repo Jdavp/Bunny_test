@@ -120,4 +120,5 @@ STATIC_URL = '/static/'
 CORS_ORIGIN_WHITELIST = (
     'https://localhost:3000',
     'https://localhost:8000',
+    'http://13.82.186.226:8000',
 )
