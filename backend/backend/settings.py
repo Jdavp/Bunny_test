@@ -122,3 +122,6 @@ CORS_ORIGIN_WHITELIST = (
     'https://localhost:8000',
     'http://13.82.186.226:8000',
 )
+
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
