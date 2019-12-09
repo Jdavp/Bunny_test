@@ -1,30 +1,12 @@
-<!DOCTYPE html>
-<html>
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
-    <title>Bunny test</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
-    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
-    <link rel="stylesheet" href="assets/css/Header-Blue.css">
-    <link rel="stylesheet" href="assets/css/Header-Dark.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <!-- JQUERY -->
-
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js?"></script>
-
-    <!-- JS file -->
-    
-    <script src="./index.js"></script>
-</head>
-
-<body>
-    <div>
+class App extends React.Component {
+    render (){
+    return ( 
+      <div className="App">
+            <div>
         <div class="header-blue" style="padding-bottom: 10px;">
             <nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
                 <div class="container-fluid"><a class="navbar-brand" href="#">Juan Diego Valencia&nbsp;</a></div>
@@ -120,8 +102,9 @@
             <div class="social"><a href="https://github.com/Jdavp"><i class="icon ion-social-github"></i></a><a href="https://www.linkedin.com/in/juandiegoalejandrovalenciape%C3%B1a/"><i class="icon ion-social-linkedin"></i></a><a href="https://twitter.com/jdavp"><i class="icon ion-social-twitter"></i></a></div>
         </footer>
     </div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-</body>
+      </div>
+    );
+  }
+}
 
-</html>
+export default App;
