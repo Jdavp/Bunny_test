@@ -24,6 +24,61 @@
 </head>
 
 <body>
+      <!-- The Modal -->
+      <div class="modal" id="myModal" class="modal fade" role="dialog" tabindex="-1">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Task</h4><button class="btn btn-primary" type="button">+</button>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Description</th>
+                                        <th>State</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Cell 1</td>
+                                        <td>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Done</label></div>
+                                        </td>
+                                    </tr>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                        </div><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                    <div class="modal-body">
+                        <p>User_name</p>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Description</th>
+                                        <th>State</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Cell 1</td>
+                                        <td>Cell 2</td>
+                                        <td>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-2"><label class="form-check-label" for="formCheck-2">Done</label></div>
+                                        </td>
+                                        <td><button class="btn btn-primary" type="button">Update</button></td>
+                                    </tr>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Save</button></div>
+                </div>
+            </div>
+        </div>
     <div>
         <div class="header-blue" style="padding-bottom: 10px;">
             <nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
@@ -54,60 +109,7 @@
                         <td class="text-center d-flex m-auto align-items-sm-end"><button class="btn btn-primary border rounded" type="button" style="margin-right: 5px;">Update</button><button class="btn btn-primary border rounded" type="button" style="background-color: rgb(255,15,0);margin-right: 5px;">Delete</button>
                             <button
                                 class="btn btn-primary border rounded" type="button">Task</button>
-                                <div class="modal fade" role="dialog" tabindex="-1">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h4 class="modal-title">Task</h4><button class="btn btn-primary" type="button">+</button>
-                                                <div class="table-responsive">
-                                                    <table class="table">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Description</th>
-                                                                <th>State</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>Cell 1</td>
-                                                                <td>
-                                                                    <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Done</label></div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr></tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
-                                            <div class="modal-body">
-                                                <p>User_name</p>
-                                                <div class="table-responsive">
-                                                    <table class="table">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>ID</th>
-                                                                <th>Description</th>
-                                                                <th>State</th>
-                                                                <th></th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>Cell 1</td>
-                                                                <td>Cell 2</td>
-                                                                <td>
-                                                                    <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-2"><label class="form-check-label" for="formCheck-2">Done</label></div>
-                                                                </td>
-                                                                <td><button class="btn btn-primary" type="button">Update</button></td>
-                                                            </tr>
-                                                            <tr></tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Save</button></div>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                         </td>
                     </tr>
                     <tr></tr>
