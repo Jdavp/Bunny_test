@@ -9,7 +9,7 @@ import React, { Component } from "react";
       FormGroup,
       Input,
       Label
-    } from "reactstrap";
+    } from "react-bootstrap";
 
     export default class CustomModal extends Component {
         constructor(props) {
