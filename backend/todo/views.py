@@ -2,6 +2,7 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from .serializers import UserSerializer, TaskSerializer 
 from .models import User, User_Tasks
+from json_response import JsonResponse
 
 class UserView(viewsets.ModelViewSet):  
   serializer_class = UserSerializer

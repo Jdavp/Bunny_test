@@ -13,7 +13,7 @@ function load_users() {
           content += '<td class="text-center d-flex m-auto align-items-sm-end">'
           content += '<button id="update_user" onclick="update_user(' + data[i].id + ')" class="btn btn-primary rounded" type="button" style="margin-right: 5px;">Update</button>'
           content += '<button id="delete_user" onclick="delete_user(' + data[i].id + ')" class="btn btn-danger rounded" type="button" style="margin-right: 5px;">Delete</button>'
-          content += '<button id="user_task" class="btn btn-info rounded" data-toggle="modal" data-target="#myModal" type="button" style="margin-right: 5px;">Task</button>'
+          content += '<button id="user_task" onclick="user_task(' + data[i].id + ')" class="btn btn-info rounded" data-toggle="modal" data-target="#myModal" type="button" style="margin-right: 5px;">Task</button>'
         }
         $('#user_info').html(content)
     }
@@ -50,14 +50,20 @@ function delete_user (user_id) {
 function user_task (user_id) {
   $.ajax({
     type: 'GET',
-    url: 'http://localhost:8000/user/' + user_id + 'user_tasks/',
+    url: 'http://localhost:8000/user/' + user_id + '/user_tasks',
     dataType:"json",
     success: function(data) {
       console.log(data)
       let content = ''
         for (i = 0; i < data.length; i++) {
-
+          content += '<tr>'
+          content += '<td>' + data[i].id + '</td>'
+          content += '<td>' + data[i].description + '</td>'
+          content += '<tr>'
+          content += '<div class="form-check"><input class="form-check-input" type="radio" id="formCheck-2"><label class="form-check-label" for="formCheck-2">Done</label></div>'
+          content += '<tr>'
         }
+        $('#user_tasks_list').html(content)
     }
 })
 }
